@@ -166,18 +166,17 @@
 
     </LinearLayout>
 
-    <view
+    <View
         android:layout_width="1dp"
         android:layout_height="410dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:background=" @android:color/darker_gray" />
+        android:background="@android:color/darker_gray" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
         android:layout_marginTop="440dp"
         android:onClick="resetScore"
         android:text="RESET" />
