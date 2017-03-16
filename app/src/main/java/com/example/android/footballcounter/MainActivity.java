@@ -15,13 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(0);
-        displayForTeamB(0);
-        displayFoulForTeamA(0);
-        displayForTeamB(0);
-
     }
-
     /**
      * Displays the given score for Team A.
      */
@@ -33,20 +27,15 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.team_aFoul_score);
         scoreView.setText(String.valueOf(score));
     }
-
-
-
-
     public void addFoulForTeamA(View v) {
-        FoulTeamA = FoulTeamA + 1;
+        FoulTeamA++ ;
         displayFoulForTeamA(FoulTeamA);
     }
 
     public void addGoalForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 1;
+        scoreTeamA++;
         displayForTeamA(scoreTeamA);
     }
-
     /**
      * Displays the given score for Team B.
      */
@@ -59,23 +48,19 @@ public class MainActivity extends AppCompatActivity {
         scoreView.setText(String.valueOf(score));
     }
     public void addFoulForTeamB(View v) {
-        FoulTeamB = FoulTeamB + 1;
+        FoulTeamB++;
         displayFoulForTeamB(FoulTeamB);
     }
 
     public void addGoalForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 1;
+        scoreTeamB++;
         displayForTeamB(scoreTeamB);
     }
     public void resetScore(View v){
-        scoreTeamA = 0;
-        scoreTeamB = 0;
-        FoulTeamB = 0;
-        FoulTeamA = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
-        displayFoulForTeamA(FoulTeamA);
-        displayFoulForTeamB(FoulTeamB);
+        displayForTeamA(0);
+        displayForTeamB(0);
+        displayFoulForTeamA(0);
+        displayFoulForTeamB(0);
     }
 
 }

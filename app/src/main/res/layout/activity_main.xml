@@ -39,14 +39,10 @@
                 android:textSize="56sp" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="24dp"
+                style="@style/ButtonStyle"
                 android:onClick="addGoalForTeamA"
                 android:text="GOAL!!!" />
+
             <TextView
                 android:id="@+id/team_aFoul_score"
                 android:layout_width="match_parent"
@@ -58,15 +54,9 @@
                 android:textSize="56sp" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                style="@style/ButtonStyle"
                 android:onClick="addFoulForTeamA"
                 android:text="FOULS" />
-
-
 
         </LinearLayout>
 
@@ -100,14 +90,10 @@
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginTop="24dp"
+                style="@style/ButtonStyle"
                 android:onClick="addGoalForTeamB"
                 android:text="GOAL!!!" />
+
             <TextView
                 android:id="@+id/team_bFoul_score"
                 android:layout_width="match_parent"
@@ -119,14 +105,9 @@
                 android:textSize="56sp" />
 
             <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                style="@style/ButtonStyle"
                 android:onClick="addFoulForTeamB"
                 android:text="FOULS" />
-
-
 
         </LinearLayout>
 
