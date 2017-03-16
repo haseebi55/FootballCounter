@@ -7,13 +7,17 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int scoreTeamA = 0;
+    int FoulTeamA = 0;
     int scoreTeamB = 0;
+    int FoulTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         displayForTeamA(0);
+        displayForTeamB(0);
+        displayFoulForTeamA(0);
         displayForTeamB(0);
 
     }
@@ -25,19 +29,20 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
-
-
-    public void addThreeForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 3;
-        displayForTeamA(scoreTeamA);
+    public void displayFoulForTeamA(int score){
+        TextView scoreView = (TextView) findViewById(R.id.team_aFoul_score);
+        scoreView.setText(String.valueOf(score));
     }
 
-    public void addTwoForTeamA(View v) {
-        scoreTeamA = scoreTeamA + 2;
-        displayForTeamA(scoreTeamA);
+
+
+
+    public void addFoulForTeamA(View v) {
+        FoulTeamA = FoulTeamA + 1;
+        displayFoulForTeamA(FoulTeamA);
     }
 
-    public void addOneForTeamA(View v) {
+    public void addGoalForTeamA(View v) {
         scoreTeamA = scoreTeamA + 1;
         displayForTeamA(scoreTeamA);
     }
@@ -49,27 +54,28 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
-
-
-    public void addThreeForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 3;
-        displayForTeamB(scoreTeamB);
+    public void displayFoulForTeamB(int score){
+        TextView scoreView = (TextView) findViewById(R.id.team_bFoul_score);
+        scoreView.setText(String.valueOf(score));
+    }
+    public void addFoulForTeamB(View v) {
+        FoulTeamB = FoulTeamB + 1;
+        displayFoulForTeamB(FoulTeamB);
     }
 
-    public void addTwoForTeamB(View v) {
-        scoreTeamB = scoreTeamB + 2;
-        displayForTeamB(scoreTeamB);
-    }
-
-    public void addOneForTeamB(View v) {
+    public void addGoalForTeamB(View v) {
         scoreTeamB = scoreTeamB + 1;
         displayForTeamB(scoreTeamB);
     }
     public void resetScore(View v){
         scoreTeamA = 0;
         scoreTeamB = 0;
+        FoulTeamB = 0;
+        FoulTeamA = 0;
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
+        displayFoulForTeamA(FoulTeamA);
+        displayFoulForTeamB(FoulTeamB);
     }
 
 }
